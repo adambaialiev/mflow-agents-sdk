@@ -1,14 +1,11 @@
-# MFlow Agents SDK
+# mflow Agents SDK
 
-A TypeScript/JavaScript SDK for building and working with AI agents across multiple large language model providers. This SDK provides a unified interface for creating agents with OpenAI, Anthropic Claude, and Together AI models.
+A TypeScript/JavaScript SDK for building and working with AI agents across multiple large language model providers. This SDK provides a unified interface for creating agents with OpenAI, Anthropic Claude, and Together AI models. You can test, use and distribute your agent in [mflow.dev](https://mflow.dev)
 
 ## Features
 
 - **Multi-provider support**: Use models from OpenAI, Anthropic, and Together AI
 - **Streaming responses**: Built-in support for Server-Sent Events (SSE) streaming
-- **Agent communication**: Framework for specialized agents to collaborate
-- **TypeScript support**: Full type definitions for improved developer experience
-- **Cross-environment compatibility**: Works in both ESM and CommonJS environments
 
 ## Installation
 
@@ -55,14 +52,12 @@ import { StreamingAgent } from "mflow-agents-sdk";
 const app = express();
 app.use(express.json());
 
-// Create a streaming endpoint
 app.post("/api/chat", async (req, res) => {
-  const { message, previousMessages, model } = req.body;
+  const { message, previousMessages } = req.body;
 
-  const systemMessage =
-    "You are a helpful assistant that provides clear and concise answers.";
+  const systemMessage = "You are website domain valuation expert";
 
-  const agent = new StreamingAgent(model, res, systemMessage);
+  const agent = new StreamingAgent("chatgpt-4o", res, systemMessage);
 
   await agent.run(message, previousMessages);
 });
