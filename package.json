@@ -14,11 +14,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mflow-agents-sdk.git"
+    "url": "https://github.com/adambaialiev/mflow-agents-sdk.git"
   },
-  "homepage": "https://github.com/yourusername/mflow-agents-sdk#readme",
+  "homepage": "https://github.com/adambaialiev/mflow-agents-sdk#readme",
   "bugs": {
-    "url": "https://github.com/yourusername/mflow-agents-sdk/issues"
+    "url": "https://github.com/adambaialiev/mflow-agents-sdk/issues"
   },
   "files": [
     "dist",
