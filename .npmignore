@@ -1,0 +1,10 @@
+src/
+tests/
+.github/
+.vscode/
+.git/
+.gitignore
+tsconfig*.json
+jest.config.js
+.eslintrc.js
+coverage/
